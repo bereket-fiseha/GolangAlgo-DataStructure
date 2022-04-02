@@ -9,7 +9,7 @@ package main
 
 // }
 
-func mergeTwoSortedArrays(firstSortedArray []int, secondSortedArray []int) []int {
+func MergeTwoSortedArrays(firstSortedArray []int, secondSortedArray []int) []int {
 	mergedSortedArray := []int{}
 	temp := 0
 	for i := 0; i < len(firstSortedArray); i++ {
@@ -51,6 +51,6 @@ func mergeSort(arrayList []int) []int {
 
 	mergeSort(leftSideList)
 	mergeSort(rightSideList)
-	return mergeTwoSortedArrays(leftSideList, rightSideList)
+	return MergeTwoSortedArrays(leftSideList, rightSideList)
 
 }
