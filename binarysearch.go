@@ -1,6 +1,6 @@
 package main
 
-func BinarySearch(arrayList []int, target int) bool {
+func BinarySearch(arrayList []int, target int) (bool, int) {
 
 	lowerBound := 0
 	upperBound := len(arrayList) - 1
@@ -9,7 +9,7 @@ func BinarySearch(arrayList []int, target int) bool {
 
 		if arrayList[midIndex] == target {
 
-			return true
+			return true, midIndex
 
 		}
 		if target < arrayList[midIndex] {
@@ -20,5 +20,5 @@ func BinarySearch(arrayList []int, target int) bool {
 			lowerBound = midIndex + 1
 		}
 	}
-	return false
+	return false, -1
 }
